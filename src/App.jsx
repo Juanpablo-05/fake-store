@@ -29,14 +29,14 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const filteredProducts = info.filter( product => {
+    const filteredProduct = info.filter( product => {
       return (
         product.price >= filter.minPrice &&
         (filter.category === "all" || product.category === filter.category) &&
         product.price <= filter.maxPrice
       );
     });
-    setFilteredProducts(filteredProducts);
+    setFilteredProducts(filteredProduct);
   }, [info, filter]);
 
   if (info.length === 0) {
@@ -60,7 +60,6 @@ function App() {
       <Nav filter = {setFilter} />
       <Products 
         info={filteredProducts}
-        nada={ nada }
         sininfo={sininfo}
       />
     </>

@@ -46,8 +46,13 @@ hr{
 .cards img{
   width: 90%;
   height: 300px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 12px;
+}
+
+.cards:hover{
+  scale: 1.02;
+
 }
 
 .btn-con{

@@ -1,6 +1,4 @@
-import React from 'react'
-
-function Products( {info, nada, sininfo} ) {
+function Products( {info, sininfo} ) {
   return (
     <>
         <section className="grid">

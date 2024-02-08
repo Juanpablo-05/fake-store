@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function Nav({ filter }) {
   const [preciomin, setPreciomin] = useState(0);
-  const [preciomax, setPreciomax] = useState(22);
+  const [preciomax, setPreciomax] = useState(1000);
 
   const canMinPrice = (e) => {
     setPreciomin(e.target.value);
@@ -46,12 +46,14 @@ function Nav({ filter }) {
       <section className="filter">
         <div className="precio">
           <label>Precios minimo - (8)$: </label>
-          <input onChange={canMinPrice} type="text" className="f_i"/>
+          <input onChange={canMinPrice} type="range" className="f_i" value={preciomin}/>
+          <span>{preciomin}</span>
         </div>
 
         <div className="precio">
           <label>Precios maximo - (1000)$: </label>
-          <input onChange={canMaxPrice} type="text" className="f_i"/>
+          <input onChange={canMaxPrice} type="range" className="f_i" value={preciomax}/>
+          <span>{preciomax}</span>
         </div>
 
         <div className="categoria">
